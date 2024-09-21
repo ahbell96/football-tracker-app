@@ -1,0 +1,47 @@
+/* Background color classes */
+.bg-orange {
+  background-color: #FF8C00;
+}
+
+.bg-orange-hover:hover {
+  background-color: #FF7500; /* Slightly darker on hover */
+}
+
+/* Text color classes */
+.text-orange {
+  color: #FF8C00;
+}
+
+.text-orange-hover:hover {
+  color: #FF7500; /* Slightly darker on hover */
+}
+
+/* Border color classes */
+.border-orange {
+  border-color: #FF8C00;
+}
+
+.border-orange-hover:hover {
+  border-color: #FF7500; /* Darker on hover */
+}
+
+/* Button styles */
+.btn-orange {
+  background-color: #FF8C00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #FF7500; /* Darker orange on hover */
+}
+
+/* Accent elements like headings or highlights */
+.accent-orange {
+  color: #FF8C00;
+  font-weight: bold;
+}
