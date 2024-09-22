@@ -1,6 +1,21 @@
 import React from "react";
+import useAxios from "../hooks/useAxios";
+import { Post } from "../types/types";
 
 const Home: React.FC = () => {
+  const { data, loading, error } = useAxios<Post[]>({
+    method: "GET",
+    url: "https://api-football-v1.p.rapidapi.com/v2/odds/league/865927/bookmaker/5",
+    params: { page: "2" },
+    headers: {
+      "x-rapidapi-key": "dcf93ce744msh6a105c0df5e2fe3p10835ajsn6e5c30d51f3c",
+      "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+    },
+  });
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
     <div className="bg-base-100">
       {/* Hero Section */}
@@ -17,6 +32,15 @@ const Home: React.FC = () => {
             </a>
           </div>
         </div>
+        {/* <h3>posts</h3>
+        <ul>
+          {data?.map((post) => (
+            <li key={post.id}>
+              <h2>{post.title}</h2>
+              <p>{post.body}</p>
+            </li>
+          ))}
+        </ul> */}
       </div>
 
       {/* Features Section */}

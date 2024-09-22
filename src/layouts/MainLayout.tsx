@@ -1,7 +1,19 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-const MainLayout = () => {
-  return <div>MainLayout</div>;
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
 };
 
 export default MainLayout;

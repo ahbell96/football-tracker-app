@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="navbar bg-neutral text-neutral-content">
       <div className="flex-1">
-        <Link to="/" className="btn btn-ghost text-xl">
+        <Link to="/" className="btn btn-ghost text-xl ">
           Football Tracker
         </Link>
       </div>
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                 </div>
               </summary>
               <ul className="bg-neutral rounded-t-none p-2">
-                <li className="bg-primary-muted">
+                <li>
                   <Link to="/">Home</Link>
                 </li>
                 <li>
