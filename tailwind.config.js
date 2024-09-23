@@ -6,13 +6,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-muted": "#FF8C00", // amber orange and set for the rest of the primary based themes, like buttons, set text colours etc.
+        softWhite: "#f5f5f5", // Soft white color for text
+        darkGray: "#333333",
+        "primary-muted": "#FF8C00", // Dark gray color for text
       },
     },
   },
   plugins: [daisyui],
   daisyui: {
     themes: [
+      {
+        mytheme: {
+          primary: "#FF8C00", // Your orange color for accents
+          secondary: "#ffffff", // White for backgrounds
+          accent: "#000000", // Black for backgrounds
+          "base-100": "#ffffff", // White background (e.g., for cards, sections)
+          "base-content": "#333333", // Dark gray text for light backgrounds
+          neutral: "#f5f5f5", // Soft white for dark backgrounds
+          info: "#f5f5f5", // You can add additional theme variables here
+        },
+      },
       {
         light: {
           // importing the built-in 'light' theme

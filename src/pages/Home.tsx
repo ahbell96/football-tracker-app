@@ -1,20 +1,22 @@
 import React from "react";
 import useAxios from "../hooks/useAxios";
 import { Post } from "../types/types";
+import { Link } from "react-router-dom";
+import Container from "../components/Container";
+
+const API_KEY = "0a4fb90d57e24894a5da71ce55ab4b9e";
+const BASE_URL = "https://api.football-data.org/v4/competitions/PL/matches";
 
 const Home: React.FC = () => {
-  const { data, loading, error } = useAxios<Post[]>({
-    method: "GET",
-    url: "https://api-football-v1.p.rapidapi.com/v2/odds/league/865927/bookmaker/5",
-    params: { page: "2" },
-    headers: {
-      "x-rapidapi-key": "dcf93ce744msh6a105c0df5e2fe3p10835ajsn6e5c30d51f3c",
-      "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-    },
-  });
+  // const { data, loading, error } = useAxios<Post[]>({
+  //   method: "GET",
+  //   url: BASE_URL,
+  //   params: { page: "2" },
+  //   headers: { "X-Auth-Token": API_KEY },
+  // });
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="bg-base-100">
@@ -27,25 +29,16 @@ const Home: React.FC = () => {
               Track live scores, follow teams, and get player statistics in
               real-time!
             </p>
-            <a href="/teams" className="btn btn-primary">
+            <Link to="/teams" className="btn btn-primary">
               View Teams
-            </a>
+            </Link>
           </div>
         </div>
-        {/* <h3>posts</h3>
-        <ul>
-          {data?.map((post) => (
-            <li key={post.id}>
-              <h2>{post.title}</h2>
-              <p>{post.body}</p>
-            </li>
-          ))}
-        </ul> */}
       </div>
 
       {/* Features Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <Container>
           <h2 className="text-4xl font-bold text-center mb-8">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
@@ -74,7 +67,7 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Call to Action Section */}

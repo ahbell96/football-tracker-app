@@ -4,7 +4,6 @@
 
 /* Tailwind already includes a basic reset with its preflight, but here are some additional base styles for further customization */
 
-
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -22,7 +21,7 @@ html {
     font-family: 'Inter', sans-serif; /* Use a font of your choice */
     line-height: 1.5;
     background-color: #f9fafb; /* Slight background color */
-    color: #333;
+    /* color: #333; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
