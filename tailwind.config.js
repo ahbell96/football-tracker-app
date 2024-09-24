@@ -8,7 +8,7 @@ export default {
       colors: {
         softWhite: "#f5f5f5", // Soft white color for text
         darkGray: "#333333",
-        "primary-muted": "#FF8C00", // Dark gray color for text
+        // "primary-muted": "#FF8C00", // Dark gray color for text
       },
     },
   },
@@ -17,7 +17,7 @@ export default {
     themes: [
       {
         mytheme: {
-          primary: "#FF8C00", // Your orange color for accents
+          // primary: "#FF8C00", // Your orange color for accents
           secondary: "#ffffff", // White for backgrounds
           accent: "#000000", // Black for backgrounds
           "base-100": "#ffffff", // White background (e.g., for cards, sections)
